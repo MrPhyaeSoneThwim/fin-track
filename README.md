@@ -12,6 +12,12 @@ FinTrack is designed to help you effortlessly track your daily income and expens
 
 - **Instant Updates:** After creating, editing, or deleting a transaction, the changes will be immediately reflected in the transaction list, and the summary will be recalculated.
 
+## Live Preview
+
+Experience FinTrack in action by visiting our live preview! See how effortlessly you can track your daily income and expenses, and stay on top of your financial health with ease. Click the link below to access the live preview:
+
+[https://fin-track-six.vercel.app](https://fin-track-six.vercel.app/)
+
 ## Project Setup
 
 For instructions on setting up FinTrack locally on your machine, please refer to the [Local Setup Guide](/documentation/project-setup.md).
