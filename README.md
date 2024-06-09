@@ -1,8 +1,17 @@
-# React + Vite
+# FinTrack - Your Daily Expense and Income Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FinTrack is designed to help you effortlessly track your daily income and expenses. Stay on top of your financial health with ease. Here’s a guide to get you started:
 
-Currently, two official plugins are available:
+## Dashboard Overview:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Creating a Transaction:** Click the "Add New Transaction" button. Fill in the details including the name, amount, date, and type (income or expense), then save it.
+
+- **Filter by Date:** Instantly view your total daily income, total daily expenses, current balance, and the transaction list for the selected day. This summary and the transaction list are dynamically updated based on the applied filters.
+
+- **Edit/Delete Actions:** Quickly modify or remove transactions using the action buttons next to each transaction item.
+
+- **Instant Updates:** After creating, editing, or deleting a transaction, the changes will be immediately reflected in the transaction list, and the summary will be recalculated.
+
+## Project Setup
+
+For instructions on setting up FinTrack locally on your machine, please refer to the [Local Setup Guide](/documentation/project-setup.md).
