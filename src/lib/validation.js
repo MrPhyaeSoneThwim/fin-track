@@ -8,7 +8,7 @@ const transactionSchema = yup.object().shape({
 		.required("Amount is required.")
 		.matches(/^[1-9]+[0-9]*$/, "Amount is invalid."),
 
-	createdAt: yup.date().required(),
+	createdAt: yup.date(),
 });
 
 export default transactionSchema;

@@ -10,12 +10,17 @@ const useTransactionStore = create(
 	persist(
 		(set, get) => ({
 			refreshId: uuidv4(),
+			filterDate: new Date(),
 			transactions: initialTransactions,
 			filteredTransactions: [],
 			dailyStats: {
 				income: 0,
 				expense: 0,
 				balance: 0,
+			},
+
+			handleFilterDate: (date) => {
+				set({ filterDate: date });
 			},
 
 			handleFilterTransactions: (date) => {

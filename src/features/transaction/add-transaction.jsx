@@ -33,18 +33,17 @@ import {
 	PopoverContent,
 	PopoverTrigger,
 } from "@/components/ui/popover";
-import { format } from "date-fns";
+import { cn } from "@/lib/utils";
+import { format, isSameDay } from "date-fns";
+import { v4 as uuidv4 } from "uuid";
 import { Calendar } from "@/components/ui/calendar";
 import { CalendarIcon } from "@radix-ui/react-icons";
-import { cn } from "@/lib/utils";
 
 import useTransactionStore from "@/store/transactionStore";
 
-import { v4 as uuidv4 } from "uuid";
-import { Separator } from "@/components/ui/separator";
-
 const AddTransaction = ({ open, onOpenChange }) => {
-	const { addTransaction } = useTransactionStore();
+	const { addTransaction, handleFilterDate, filterDate } =
+		useTransactionStore();
 
 	const form = useForm({
 		resolver: yupResolver(transactionSchema),
@@ -56,9 +55,17 @@ const AddTransaction = ({ open, onOpenChange }) => {
 		},
 	});
 
+	useEffect(() => {
+		if (!isSameDay(filterDate, new Date())) {
+			form.setValue("createdAt", filterDate);
+		}
+	}, [filterDate]);
+
 	function onSubmit(values) {
 		addTransaction({ ...values, _id: uuidv4() });
 		form.reset();
+
+		handleFilterDate(values.createdAt);
 		onOpenChange();
 	}
 
