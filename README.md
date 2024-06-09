@@ -4,7 +4,7 @@ FinTrack is designed to help you effortlessly track your daily income and expens
 
 ## Dashboard Overview:
 
-- **Creating a Transaction:** Click the "Add New Transaction" button. Fill in the details including the name, amount, date, and type (income or expense), then save it.
+- **Creating a Transaction:** Click the "New Transaction" button. Fill in the details including the name, amount, date, and type (income or expense), then save it.
 
 - **Filter by Date:** Instantly view your total daily income, total daily expenses, current balance, and the transaction list for the selected day. This summary and the transaction list are dynamically updated based on the applied filters.
 
